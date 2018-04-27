@@ -1,0 +1,47 @@
+//----------------------Duplication persists-------------------
+/**
+project(':app') {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+}
+*/
+
+/**
+project(':core') {
+    apply plugin: 'java'
+   
+    repositories {
+        mavenCentral()
+    }
+
+}
+*/
+// ---------------------Duplication persists-------------------
+
+//----------------------Eliminate Deduplication----------------
+/**
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+}
+*/
+//----------------------Eliminate Deduplication-----------------
+
+//----------------------Config for all subprojects -------------
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
+    }
+}
+//----------------------Config for all subprojects -------------
+
+
